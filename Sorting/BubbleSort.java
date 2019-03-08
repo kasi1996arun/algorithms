@@ -1,6 +1,5 @@
-import java.util.Scanner;
-import java.util.Arrays;
-class SelectionSort
+import java.util.*;
+class BubbleSort
 {
 	public static void swap(int[] a, int x, int y)
 	{
@@ -13,23 +12,23 @@ class SelectionSort
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		int[] a = new int[n];
-		for(int i=0;i<n;i++)
-		{
+		for(int i=0;i<n;i++){
 			a[i] = in.nextInt();
 		}
+		boolean swapped;
 		for(int i=0;i<n;i++)
 		{
-			int minIndex = i;
-			int j = i+1;
-			for(int k=j;k<n;k++)
+			swapped = false;
+			for(int j=0;j<n-i-1;j++)
 			{
-				if (a[minIndex]>a[k]) {
-					minIndex = k;
+				if(a[j]>a[j+1]){
+					swapped = true;
+					swap(a,j,j+1);
 				}
 			}
-			swap(a, minIndex, i);
+			if(!swapped)
+				break;
 		}
-		System.out.println("Sorted Array");
-		System.out.print(Arrays.toString(a));
+		System.out.println("Sorted array : "+ Arrays.toString(a));
 	}
 }

@@ -1,0 +1,5 @@
+Logics:
+Selection sort :
+At each iteration we are determining the next min value in array and arranging in order
+Bubble sort :
+Comparing the adjacent elements and swapping if not in order - At each iteration, last i eleemtsnts are already arranged - so if inner loops iterates without any swaps means the array is already sorted - boolean flah is maintained to determine this.
