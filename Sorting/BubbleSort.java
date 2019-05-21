@@ -30,5 +30,6 @@ class BubbleSort
 				break;
 		}
 		System.out.println("Sorted array : "+ Arrays.toString(a));
+
 	}
 }
